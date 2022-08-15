@@ -1,0 +1,70 @@
+// Container
+.container {
+  max-width: ($containerWidth + $containerPadding) + px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
+
+  @media (max-width: $breakpoint992) {
+    max-width: 970px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    max-width: 740px;
+  }
+
+  @media (max-width: $breakpoint480) {
+    max-width: none;
+  }
+}
+
+// Body Locked
+body {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  background-color: #63686d;
+
+  &.locked {
+    overflow: hidden;
+  }
+}
+
+// Animations
+// Fade
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.btn {
+  color: #fff;
+  background-color: green;
+  border-radius: 8px;
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+    background-color: rgb(8, 53, 8);
+  }
+}
+
+.title {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 130%;
+  color: rgba(255, 255, 255, 0.9);
+  @media (max-width: $breakpoint992) {
+    font-size: 42px;
+  }
+  @media (max-width: $breakpoint768) {
+    font-size: 36px;
+  }
+  @media (max-width: $breakpoint480) {
+    font-size: 24px;
+  }
+}
